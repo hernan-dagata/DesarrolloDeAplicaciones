@@ -30,15 +30,15 @@
                     <tbody>
                         <tr>
                             <td> <label for="codigo"> Código: </label> </td>
-                            <td> <input type="text" id="codigo" name="codigo"> </td>
+                            <td> <input type="text" id="codigo" name="codigo" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="titulo">Título:</label> </td>
-                            <td> <input type="text" id="titulo" name="titulo"> </td>
+                            <td> <input type="text" id="titulo" name="titulo" pattern="^.{1,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="isbn">ISBN:</label> </td>
-                            <td>  <input type="text" id="isbn" name="isbn" pattern="^[978|979]\d{9}-\d$"> </td>
+                            <td>  <input type="text" id="isbn" name="isbn" placeholder="978-0-306-40615-7" pattern="^(97[89]-?)?\d{1,5}-?\d{1,7}-?\d{1,6}-?(\d|X)$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="editorial">Editorial:</label> </td>
@@ -46,15 +46,15 @@
                         </tr>
                         <tr>
                             <td> <label for="paginas">Páginas:</label> </td>
-                            <td> <input type="number" id="paginas" name="paginas"> </td>
+                            <td> <input type="number" id="paginas" name="paginas" min="20" max="10000" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="codigoAutor">Ejemplares:</label> </td>
-                            <td> <input type="number" id="ejemplares" name="ejemplares"> </td>
+                            <td> <input type="number" id="ejemplares" name="ejemplares" min="2" max="100" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="codigoAutor">Código autor:</label> </td>
-                            <td> <input type="text" id="codigoAutor" name="codigoAutor"> </td>
+                            <td> <input type="text" id="codigoAutor" name="codigoAutor" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -72,11 +72,11 @@
                     <tbody>
                         <tr>
                             <td> <label for="codigoAutor"> Código autor: </label> </td>
-                            <td> <input type="text" id="codigoAutor" name="codigoAutor"> </td>
+                            <td> <input type="text" id="codigoAutor" name="codigoAutor" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="nombreAutor"> Nombre autor: </label> </td>
-                            <td> <input type="text" id="nombreAutor" name="nombreAutor"> </td>
+                            <td> <input type="text" id="nombreAutor" name="nombreAutor" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td></td>

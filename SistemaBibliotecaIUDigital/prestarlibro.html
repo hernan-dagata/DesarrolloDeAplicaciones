@@ -30,19 +30,19 @@
                     <tbody>
                         <tr>
                             <td> <label for="codigoUsuario"> Código usuario: </label> </td>
-                            <td> <input type="text" id="codigoUsuario" name="codigoUsuario"> </td>
+                            <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="codigoEjemplar">Código ejemplar:</label> </td>
-                            <td> <input type="text" id="codigoEjemplar" name="codigoEjemplar"> </td>
+                            <td> <input type="text" id="codigoEjemplar" name="codigoEjemplar" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="fechaPrestamo">Fecha prestamo:</label> </td>
-                            <td>  <input type="date" id="fechaPrestamo" name="fechaPrestamo"> </td>
+                            <td>  <input type="date" id="fechaPrestamo" name="fechaPrestamo" readonly> </td>
                         </tr>
                         <tr>
                             <td> <label for="fechaDevolucion">Fecha devolución:</label> </td>
-                            <td> <input type="date" id="fechaDevolucion" name="fechaDevolucion"> </td>
+                            <td> <input type="date" id="fechaDevolucion" name="fechaDevolucion" required> </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -60,19 +60,19 @@
                     <tbody>
                         <tr>
                             <td> <label for="codigoUsuario"> Código usuario: </label> </td>
-                            <td> <input type="text" id="codigoUsuario" name="codigoUsuario"> </td>
+                            <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="nombreUsuario"> Nombre: </label> </td>
-                            <td> <input type="text" id="nombreUsuario" name="nombreUsuario"> </td>
+                            <td> <input type="text" id="nombreUsuario" name="nombreUsuario" pattern="^.{1,}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="telefono"> Teléfono: </label> </td>
-                            <td> <input type="text" id="telefono" name="telefono"> </td>
+                            <td> <input type="text" id="telefono" name="telefono" pattern="^\d{7,11}$" required> </td>
                         </tr>
                         <tr>
                             <td> <label for="direccion"> Dirección: </label> </td>
-                            <td> <input type="text" id="direccion" name="direccion"> </td>
+                            <td> <input type="text" id="direccion" name="direccion" required> </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -86,6 +86,9 @@
     <br>
     
     <script src="js/hideelement.js"></script>
+    <script src="js/actualdate.js"></script>
+    <script src="js/datevalidation.js"></script>
+    
     <footer>
         <center> Company ODS - Todos los derechos reservados © 2023 </center>
     </footer>
