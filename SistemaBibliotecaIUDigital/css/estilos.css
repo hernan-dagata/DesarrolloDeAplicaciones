@@ -28,12 +28,14 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: red;
+    color: black;
+    background-color: white;
 }
 
 h3:hover {
     text-decoration: underline;
-    color: grey;
+    color: white;
+    background-color: black;
 }
 
 .contenedor {
