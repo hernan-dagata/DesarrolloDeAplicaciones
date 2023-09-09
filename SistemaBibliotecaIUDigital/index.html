@@ -10,13 +10,23 @@
     <header>
         <h1>Sistema de Biblioteca IU Digital</h1>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="agregarLibro.html">Agregar libro</a></li>
+            <li><a href="prestarLibro.html">Prestar libro</a></li>
+            <li><a href="listaLibros.html">Libros disponibles</a></li>
+            <li><a href="librosPrestados.html">Libros prestados</a></li>
+        </ul>
+    </nav>
+
     <h2>Agregar Libro</h2>
 
     <div class="contenedor">
         <section>
-            <h3>Registrar libro</h3>
-            <form action="/agregar_libros" method="post">
-                <table> 
+            <h3 href="#" class="toggleLink" data-target="registrarLibro"> Registrar libro </h3>
+            <form id="registrarLibro" style="display: none;">
+                <table align="center"> 
                     <tbody>
                         <tr>
                             <td> <label for="codigo"> Código: </label> </td>
@@ -28,7 +38,7 @@
                         </tr>
                         <tr>
                             <td> <label for="isbn">ISBN:</label> </td>
-                            <td>  <input type="text" id="isbn" name="isbn"> </td>
+                            <td>  <input type="text" id="isbn" name="isbn" pattern="^[978|979]\d{9}-\d$"> </td>
                         </tr>
                         <tr>
                             <td> <label for="editorial">Editorial:</label> </td>
@@ -39,10 +49,15 @@
                             <td> <input type="number" id="paginas" name="paginas"> </td>
                         </tr>
                         <tr>
-                            <td> <label for="codigoAutor">Código de Autor:</label> </td>
+                            <td> <label for="codigoAutor">Ejemplares:</label> </td>
+                            <td> <input type="number" id="ejemplares" name="ejemplares"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="codigoAutor">Código autor:</label> </td>
                             <td> <input type="text" id="codigoAutor" name="codigoAutor"> </td>
                         </tr>
                         <tr>
+                            <td></td>
                             <td> <input type="submit" value="Agregar Libro"> </td>
                         </tr>
                     </tbody>
@@ -51,30 +66,65 @@
         </section>
     
         <section>
-            <h1>Título de la Sección 2</h1>
-            <p>Contenido de la sección 2...</p>
+            <h3 href="#" class="toggleLink" data-target="registrarAutor"> Registrar autor </h3>
+            <form id="registrarAutor" style="display: none;">
+                <table align="center"> 
+                    <tbody>
+                        <tr>
+                            <td> <label for="codigoAutor"> Código autor: </label> </td>
+                            <td> <input type="text" id="codigoAutor" name="codigoAutor"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="nombreAutor"> Nombre autor: </label> </td>
+                            <td> <input type="text" id="nombreAutor" name="nombreAutor"> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <input type="submit" value="Agregar Autor"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </section>
     
         <section>
-            <h1>Título de la Sección 3</h1>
-            <p>Contenido de la sección 3...</p>
+            <h3 href="#" class="toggleLink" data-target="registrarUsuario"> Registrar usuario </h3>
+            <form id="registrarUsuario" style="display: none;">
+                <table align="center"> 
+                    <tbody>
+                        <tr>
+                            <td> <label for="codigoUsuario"> Código usuario: </label> </td>
+                            <td> <input type="text" id="codigoUsuario" name="codigoUsuario"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="nombreUsuario"> Nombre: </label> </td>
+                            <td> <input type="text" id="nombreUsuario" name="nombreUsuario"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="telefono"> Teléfono: </label> </td>
+                            <td> <input type="text" id="telefono" name="telefono"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="direccion"> Dirección: </label> </td>
+                            <td> <input type="text" id="direccion" name="direccion"> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <input type="submit" value="Agregar Usuario"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </section>
     </div>
 
     
 
 
-    <nav>
-        <ul>
-            <li><a href="agregarLibro.html">Agregar libro</a></li>
-            <li><a href="prestarLibro.html">Prestar libro</a></li>
-            <li><a href="listaLibros.html">Libros disponibles</a></li>
-            <li><a href="librosPrestados.html">Libros prestados</a></li>
-        </ul>
-    </nav>
-
+   
+    <script src="js/hideelement.js"></script>
     <footer>
-        <center> Company ODS - 2023 </center>
+        <center> copyright © - Company ODS - 2023 </center>
     </footer>
 </body>
 </html>

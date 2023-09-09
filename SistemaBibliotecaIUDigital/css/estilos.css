@@ -28,6 +28,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: red;
+}
+
+h3:hover {
+    text-decoration: underline;
+    color: grey;
 }
 
 .contenedor {
@@ -40,4 +46,8 @@ section {
     border: 1px solid #ccc;
     flex: 1; 
     padding: 20px;
+}
+
+h2 {
+    text-align: center;
 }
