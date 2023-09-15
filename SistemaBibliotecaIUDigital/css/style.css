@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li a { 
+    text-decoration: none;
+    color: white;
+    font-size: 30px
+}
+
+ul li a:hover, h4:hover {
+    text-decoration: underline;
+    color: #333;
+    background-color: white; 
+    font-size: 30px
+}
+
+#logo {
+    width: 100;
+    height: 150px;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-section .content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: white;
+    color: #333;
+}
+
+.accordion-section.active .content {
+    height: auto;
+}
+
+/* Para WebKit (Safari, Chrome, etc.) */
+::placeholder {
+    color: red;
+}
+
+/* Para Edge (a partir de la versión 18) */
+::-ms-input-placeholder {
+    color: red;
+}
+

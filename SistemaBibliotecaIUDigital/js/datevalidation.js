@@ -1,4 +1,4 @@
-document.getElementById("registrarLibro").addEventListener("submit", function(e) {
+document.getElementById("registrarPrestamo").addEventListener("submit", function(e) {
     var currentDate = new Date(document.getElementById("fechaPrestamo").value);
     var inputDate = new Date(document.getElementById("fechaDevolucion").value);
 

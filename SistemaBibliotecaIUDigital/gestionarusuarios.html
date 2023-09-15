@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IU Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="row">
+                <div class="col-4 col-sm-4 col-md-4" id="logo">
+                <img src="/Users/hdgarcia/Documents/DesarrolloAplicaciones/DesarrolloDeAplicaciones/SistemaBibliotecaIUDigital/img/biblioteca.png" alt="logo" id="logo">
+                </div>
+                <div class="col-8 col-sm-8 col-md-8" id="titulo">
+                    <h1>Sistema de Biblioteca IU Digital</h1>
+                </div>
+              </div>
+        </nav>
+    </header>
+
+    <nav class="container">
+        <ul class="row">
+            <li class="col-4 col-sm-4 col-md-4"><a href="index.html">Libros</a></li>
+            <li class="col-4 col-sm-4 col-md-4"><a href="gestionarautores.html">Autores</a></li>
+            <li class="col-4 col-sm-4 col-md-4"><a href="gestionarusuarios.html">Usuarios</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+    <h2><center> Gestionar usuarios </center></h2>
+    <hr>
+    
+    <nav class="accordion">
+        <div class="row">
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Registrar usuario</h4>
+                <div class="content"> 
+                    <form id="registrarUsuario" >
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigoUsuario"> Código usuario: </label> </td>
+                                    <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="nombreUsuario"> Nombre: </label> </td>
+                                    <td> <input type="text" id="nombreUsuario" name="nombreUsuario" pattern="^.{1,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="telefono"> Teléfono: </label> </td>
+                                    <td> <input type="text" id="telefono" name="telefono" pattern="^\d{7,11}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="direccion"> Dirección: </label> </td>
+                                    <td> <input type="text" id="direccion" name="direccion" required> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Agregar Usuario"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Consultar usuario</h4>
+                <div class="content"> 
+                    <form id="consultarUsuario" >
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigoUsuario"> Código usuario: </label> </td>
+                                    <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="nombreUsuario"> Nombre: </label> </td>
+                                    <td> <input type="text" id="nombreUsuario" name="nombreUsuario" pattern="^.{1,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="telefono"> Teléfono: </label> </td>
+                                    <td> <input type="text" id="telefono" name="telefono" pattern="^\d{7,11}$" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="direccion"> Dirección: </label> </td>
+                                    <td> <input type="text" id="direccion" name="direccion" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Consultar Usuario"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-12 col-md-4">
+                <h4>Eliminar usuario</h4>
+                <div class="content"> 
+                    <form id="eliminarUsuario" >
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigoUsuario"> Código usuario: </label> </td>
+                                    <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="nombreUsuario"> Nombre: </label> </td>
+                                    <td> <input type="text" id="nombreUsuario" name="nombreUsuario" pattern="^.{1,}$" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Eliminar Usuario"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </nav>
+    
+    <br>
+    <script src="js/hidesection.js"></script>
+    <footer>
+        <center> Company ODS - Todos los derechos reservados © 2023 </center>
+    </footer>
+</body>
+</html>

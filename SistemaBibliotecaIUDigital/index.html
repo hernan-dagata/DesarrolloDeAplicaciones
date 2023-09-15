@@ -3,93 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Biblioteca IU Digital</title>
-    <link rel="stylesheet" href="css/general_style.css">
+    <title>IU Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <h1>Sistema de Biblioteca IU Digital</h1>
+        <nav class="container">
+            <div class="row">
+                <div class="col-4 col-sm-4 col-md-4" id="logo">
+                <img src="/Users/hdgarcia/Documents/DesarrolloAplicaciones/DesarrolloDeAplicaciones/SistemaBibliotecaIUDigital/img/biblioteca.png" alt="logo" id="logo">
+                </div>
+                <div class="col-8 col-sm-8 col-md-8" id="titulo">
+                    <h1>Sistema de Biblioteca IU Digital</h1>
+                </div>
+              </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Agregar libro</a></li>
-            <li><a href="prestarlibro.html">Prestar libro</a></li>
-            <li><a href="listalibros.html">Libros disponibles</a></li>
-            <li><a href="librosprestados.html">Libros prestados</a></li>
+    <nav class="container">
+        <ul class="row">
+            <li class="col-4 col-sm-4 col-md-4"><a href="index.html">Libros</a></li>
+            <li class="col-4 col-sm-4 col-md-4"><a href="gestionarautores.html">Autores</a></li>
+            <li class="col-4 col-sm-4 col-md-4"><a href="gestionarusuarios.html">Usuarios</a></li>
         </ul>
     </nav>
 
-    <h2>Agregar Libro</h2>
+    <hr>
+    <h2><center> Gestionar libros </center></h2>
+    <hr>
+    
+    <nav class="accordion">
+        <div class="row">
 
-    <div class="contenedor">
-        <section>
-            <h3 href="#" class="toggleLink" data-target="registrarLibro"><center> Registrar libro </center></h3>
-            <form id="registrarLibro" style="display: none;">
-                <table align="center"> 
-                    <tbody>
-                        <tr>
-                            <td> <label for="codigo"> Código: </label> </td>
-                            <td> <input type="text" id="codigo" name="codigo" pattern="^.{3,}$" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="titulo">Título:</label> </td>
-                            <td> <input type="text" id="titulo" name="titulo" pattern="^.{1,}$" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="isbn">ISBN:</label> </td>
-                            <td>  <input type="text" id="isbn" name="isbn" placeholder="978-0-306-40615-7" pattern="^(97[89]-?)?\d{1,5}-?\d{1,7}-?\d{1,6}-?(\d|X)$" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="editorial">Editorial:</label> </td>
-                            <td> <input type="text" id="editorial" name="editorial"> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="paginas">Páginas:</label> </td>
-                            <td> <input type="number" id="paginas" name="paginas" min="20" max="10000" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="codigoAutor">Ejemplares:</label> </td>
-                            <td> <input type="number" id="ejemplares" name="ejemplares" min="2" max="100" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="codigoAutor">Código autor:</label> </td>
-                            <td> <input type="text" id="codigoAutor" name="codigoAutor" pattern="^.{3,}$" required> </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" value="Agregar Libro"> </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-        </section>
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Registrar libro</h4>
+                <div class="content">
+                    <form id="registrarLibro">
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigo"> Código: </label> </td>
+                                    <td> <input type="text" id="codigo" name="codigo" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="titulo">Título:</label> </td>
+                                    <td> <input type="text" id="titulo" name="titulo" pattern="^.{1,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="isbn">ISBN:</label> </td>
+                                    <td>  <input type="text" id="isbn" name="isbn" placeholder="*" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="editorial">Editorial:</label> </td>
+                                    <td> <input type="text" id="editorial" name="editorial"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="paginas">Páginas:</label> </td>
+                                    <td> <input type="number" id="paginas" name="paginas" min="0" max="10000"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Ejemplares:</label> </td>
+                                    <td> <input type="number" id="ejemplares" name="ejemplares" min="2" max="100" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Código autor:</label> </td>
+                                    <td> <input type="text" id="codigoAutor" name="codigoAutor" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Agregar libro"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Modificar libro</h4>
+                <div class="content">
+                    <form id="modificarLibro">
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigo"> Código: </label> </td>
+                                    <td> <input type="text" id="codigo" name="codigo" pattern="^.{3,}$" placeholder="*" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="titulo">Título:</label> </td>
+                                    <td> <input type="text" id="titulo" name="titulo" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="isbn">ISBN:</label> </td>
+                                    <td>  <input type="text" id="isbn" name="isbn" placeholder="*" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="editorial">Editorial:</label> </td>
+                                    <td> <input type="text" id="editorial" name="editorial"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="paginas">Páginas:</label> </td>
+                                    <td> <input type="number" id="paginas" name="paginas" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Ejemplares:</label> </td>
+                                    <td> <input type="number" id="ejemplares" name="ejemplares" min="2" max="100" placeholder="*" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Código autor:</label> </td>
+                                    <td> <input type="text" id="codigoAutor" name="codigoAutor" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Modificar libro"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Eliminar libro</h4>
+                <div class="content">
+                    <form id="modificarLibro">
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="codigo"> Código: </label> </td>
+                                    <td> <input type="text" id="codigo" name="codigo" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="titulo">Título:</label> </td>
+                                    <td> <input type="text" id="titulo" name="titulo" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Cantidad:</label> </td>
+                                    <td> <input type="number" id="ejemplares" name="ejemplares" min="1" max="5" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoAutor">Código autor:</label> </td>
+                                    <td> <input type="text" id="codigoAutor" name="codigoAutor" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Eliminar libro"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Registrar prestamo</h4>
+                <div class="content">
+                    <form id="registrarPrestamo" data-target="registrarPrestamo">
+                        <table align="center"> 
+                            <tbody align="justify"> 
+                                <tr>
+                                    <td> <label for="codigoUsuario"> Código usuario: </label> </td>
+                                    <td> <input type="text" id="codigoUsuario" name="codigoUsuario" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="codigoEjemplar">Código ejemplar:</label> </td>
+                                    <td> <input type="text" id="codigoEjemplar" name="codigoEjemplar" pattern="^.{3,}$" required placeholder="*"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="fechaPrestamo">Fecha prestamo:</label> </td>
+                                    <td>  <input type="date" id="fechaPrestamo" name="fechaPrestamo" readonly> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="fechaDevolucion">Fecha devolución:</label> </td>
+                                    <td> <input type="date" id="fechaDevolucion" name="fechaDevolucion" required> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" value="Registrar prestamo"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Libros disponibles</h4>
+                <div class="content">
+                    <form id="librosDisponibles">
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="titulo"> Título: </label> </td>
+                                    <td> <input type="text" id="titulo" name="titulo"> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" id="consultarLibrosDisponibles" value="Consultar"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+            <section class="accordion-section col-12 col-sm-6 col-md-4">
+                <h4>Libros prestados</h4>
+                <div class="content">
+                    <form id="librosPrestados">
+                        <table align="center"> 
+                            <tbody align="justify">
+                                <tr>
+                                    <td> <label for="tituloLibro"> Título libro: </label> </td>
+                                    <td> <input type="text" id="tituloLibro" name="tituloLibro"> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="nombreUsuario"> Nombre usuario: </label> </td>
+                                    <td> <input type="text" id="nombreUsuario" name="nombreUsuario"> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="submit" id="consultarLibrosPrestados" value="Consultar"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </nav>
     
-        <section>
-            <h3 href="#" class="toggleLink" data-target="registrarAutor"><center> Registrar autor </center></h3>
-            <form id="registrarAutor" style="display: none;">
-                <table align="center"> 
-                    <tbody>
-                        <tr>
-                            <td> <label for="codigoAutor"> Código autor: </label> </td>
-                            <td> <input type="text" id="codigoAutor" name="codigoAutor" pattern="^.{3,}$" required> </td>
-                        </tr>
-                        <tr>
-                            <td> <label for="nombreAutor"> Nombre autor: </label> </td>
-                            <td> <input type="text" id="nombreAutor" name="nombreAutor" pattern="^.{3,}$" required> </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" value="Agregar Autor"> </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-        </section>
-    </div>
     <br>
-    
-    <script src="js/hideelement.js"></script>
+    <script src="js/hidesection.js"></script>
+    <script src="js/actualdate.js"></script>
+    <script src="js/datevalidation.js"></script>
     <footer>
         <center> Company ODS - Todos los derechos reservados © 2023 </center>
     </footer>
